@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.prerna.sspapp.IdeologyActivity"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:layout_gravity="center|top"
+        android:background="@color/orange"
+        android:id="@+id/toolbar_ideology">
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/darkblack"
+            android:text="The Sarv Sambhaav Party believes in creating a socialist society, which works on the principle of equality and the party has a secular and democratic outlook. The Sarv Sambhaav Party believes in continuously working towards the upliftment of weaker sections of society and it stands against communal forces and struggle for social upliftment of the poor, backward and socially weaker sections of society."/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
