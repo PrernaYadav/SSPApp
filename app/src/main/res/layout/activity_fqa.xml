@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context="com.example.prerna.sspapp.FqaActivity"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_fqa"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="center|top"
+        android:background="@color/green"
+        android:gravity="center">
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblack"
+            android:text="Ques1. Are my donations eligible for tax deductions?"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ans: All donations except cash are eligible for tax deductions under section 80 GGB/GGC of the Income Tax Act, 1961."
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ques2. Who can donate to SSP?"
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ans: Donor should be an Indian citizen either living in India or abroad (NRIs with Valid Indian passport)."
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ques3. How do I know that my donation has been accepted?"
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ans: Incase of online donation, the receipt are sent at the registered email id, after every successful transaction. However, for Cheque / DD / cash, the receipt are sent by post or hand delivery as the case may be."
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ques4. I have more questions on donations. How do I get more help?"
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ans: One can e-mail us at info@ssparty.in or call us at +91-9415573612."
+            android:textColor="@color/darkblack"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

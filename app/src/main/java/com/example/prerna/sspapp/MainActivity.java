@@ -126,6 +126,13 @@ public class MainActivity extends AppCompatActivity {
                 }else if (selected.equals("Donate Here")){
                     startActivity(new Intent(MainActivity.this,DonationActivity.class));
 
+                }else if (selected.equals("NEFT/RTGS")){
+                    startActivity(new Intent(MainActivity.this,NeftActivity.class));
+
+                }else if (selected.equals("Donation FQAs")){
+                    startActivity(new Intent(MainActivity.this,FqaActivity.class));
+                }else if (selected.equals("Apply Online")){
+                    startActivity(new Intent(MainActivity.this,OnlineActivity.class));
                 }
                 return true;
             }

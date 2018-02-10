@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.example.prerna.sspapp.OnlineActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_online"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="center|top"
+        android:background="@color/green"
+        android:gravity="center">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Details"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/et_online_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <Spinner
+                android:id="@+id/spiner_online_gender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_shape"
+                    android:text="Choose file"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_online_image"
+                    android:padding="10dp"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:id="@+id/img_photo"
+                    android:src="@drawable/partysambol_01"
+                    />
+
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_online_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date of Birth"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Basic Profile"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Details"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_online_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Home Address"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter State"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_loksabha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Lok Sabha Seat"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_assembly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Assembly Seat"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter PIN code"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mobile Number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Telephone Number"
+                android:inputType="number"
+                android:maxLength="12"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_online_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Today's Date"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/btn_online_submit"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:background="@drawable/button_shape"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_shape"
+                android:text="RESET"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/btn_online_reset"
+                android:textColor="@android:color/white" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

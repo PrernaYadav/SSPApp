@@ -156,13 +156,25 @@
             android:textSize="25dp"
             android:textStyle="bold" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="I declare that I am an Indian Citizen and I am making this contribution to the SSP out of my free will, from income legally earned/owned by me. The details that I have provided above are true and nothing has been misrepresented."
-            android:textColor="@android:color/white"
-            android:textSize="15dp"
-             />
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I declare that I am an Indian Citizen and I am making this contribution to the SSP out of my free will, from income legally earned/owned by me. The details that I have provided above are true and nothing has been misrepresented."
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                />
+
+        </LinearLayout>
 
         <Button
             android:layout_width="match_parent"

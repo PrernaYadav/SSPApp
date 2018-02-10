@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.prerna.sspapp">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -26,25 +28,27 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".SripalActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".RajpalActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".KuldeepActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".RajeshActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        </activity>
-
-        <activity android:name=".VideosActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
-        <activity android:name=".DonationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".VideosActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".DonationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".NeftActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".FqaActivity" />
+        <activity android:name=".OnlineActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 

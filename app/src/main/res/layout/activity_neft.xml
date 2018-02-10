@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.example.prerna.sspapp.NeftActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_neft"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="center|top"
+        android:background="@color/green"
+        android:gravity="center">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Details"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/et_neft_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <Spinner
+                android:id="@+id/spiner_neft_gender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_neft_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date of Birth"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Details"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/et_neft_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Home Address"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_neft_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_neft_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+
+            <EditText
+                android:id="@+id/et_neft_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Telephone Number"
+                android:inputType="number"
+                android:maxLength="12"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_neft_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Todays Date"
+                android:inputType="date"
+                android:maxLength="12"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_neft_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Message"
+                android:inputType="text"
+                android:maxLength="12"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Decleration :"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I declare that I am an Indian Citizen and I am making this contribution to the SSP out of my free will, from income legally earned/owned by me. The details that I have provided above are true and nothing has been misrepresented."
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/btn_neft_submit"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:background="@drawable/button_shape"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_shape"
+                android:text="RESET"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/btn_neft_reset"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
