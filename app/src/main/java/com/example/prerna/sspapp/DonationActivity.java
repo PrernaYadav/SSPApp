@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ public class DonationActivity extends AppCompatActivity {
     Button submit, reset;
     String[] genderr = {"Select Gender", "Male", "Female", "Other"};
     String[] categoryy = {"Select category", "Cheque", "Demand Draft", "Neft/Rtgs"};
+    String genderrr,categoryyy,namee,dobb,homee,emaill,mobilee,datee,amountt,numberr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,20 +67,88 @@ public class DonationActivity extends AppCompatActivity {
         //Setting the ArrayAdapter data on the Spinner
         category.setAdapter(aaa);
 
+        gender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(
+                    AdapterView<?> adapterView, View view,
+                    int i, long l) {
+                genderrr = gender.getItemAtPosition(i).toString();
+            }
+
+            public void onNothingSelected(
+                    AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+        category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(
+                    AdapterView<?> adapterView, View view,
+                    int i, long l) {
+                categoryyy = category.getItemAtPosition(i).toString();
+            }
+
+            public void onNothingSelected(
+                    AdapterView<?> adapterView) {
+
+            }
+        });
+
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DonationActivity.this, "Data submitted successfully", Toast.LENGTH_LONG).show();
-                name.setText("");
-                dob.setText("");
-                homeAddress.setText("");
-                email.setText("");
-                mobile.setText("");
-                telephone.setText("");
-                date.setText("");
-                amount.setText("");
-                number.setText("");
+
+
+                 namee=name.getText().toString();
+                 dobb=dob.getText().toString();
+                 homee=homeAddress.getText().toString();
+                 emaill=email.getText().toString();
+                 mobilee=mobile.getText().toString();
+                 datee=date.getText().toString();
+                 amountt=amount.getText().toString();
+                 numberr=number.getText().toString();
+
+
+
+                if (namee.equals("")){
+                    name.setError("Please Enter Name");
+                }else if (dobb.equals("")){
+                    dob.setError("Please Enter Date of Birth");
+                }else if (homee.equals("")){
+                    homeAddress.setError("Please Enter Address");
+                }else if (emaill.equals("")){
+                    email.setError("Please Enter Email");
+                }else if (mobilee.equals("")){
+                    mobile.setError("Please Enter Mobile");
+                }else if (datee.equals("")){
+                    date.setError("Please Enter Date");
+                }else if (amountt.equals("")){
+                    amount.setError("Please Enter Amount");
+                }else if (numberr.equals("")){
+                    number.setError("Please Enter Number");
+                }else if (genderrr.equals("Select Gender")){
+                    Toast.makeText(DonationActivity.this, "Please Select Gender", Toast.LENGTH_LONG).show();
+
+                }else if (categoryyy.equals("Select category")){
+                    Toast.makeText(DonationActivity.this, "Please Select category", Toast.LENGTH_LONG).show();
+                }
+
+                else {
+                    Toast.makeText(DonationActivity.this, "Data submitted successfully", Toast.LENGTH_LONG).show();
+                    name.setText("");
+                    dob.setText("");
+                    homeAddress.setText("");
+                    email.setText("");
+                    mobile.setText("");
+                    telephone.setText("");
+                    date.setText("");
+                    amount.setText("");
+                    number.setText("");
+                }
+
+
             }
         });
 
