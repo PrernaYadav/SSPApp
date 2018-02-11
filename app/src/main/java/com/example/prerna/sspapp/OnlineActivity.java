@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -192,7 +193,11 @@ public class OnlineActivity extends AppCompatActivity {
                     Toast.makeText(OnlineActivity.this, "Enter Date", Toast.LENGTH_LONG).show();
 
                 } else {
-                    Toast.makeText(OnlineActivity.this, "Data submitted successfully", Toast.LENGTH_LONG).show();
+
+                    Toast toast= Toast.makeText(OnlineActivity.this,
+                            "Data submitted successfully", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER| Gravity.CENTER_HORIZONTAL, 0, 0);
+                    toast.show();
                     name.setText("");
                     dob.setText("");
                     basic.setText("");
@@ -214,7 +219,12 @@ public class OnlineActivity extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(OnlineActivity.this, "Reset successfully", Toast.LENGTH_LONG).show();
+
+                Toast toast= Toast.makeText(OnlineActivity.this,
+                        "Reset Successfully", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER| Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.show();
+
                 name.setText("");
                 dob.setText("");
                 basic.setText("");

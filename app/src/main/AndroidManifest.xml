@@ -3,8 +3,8 @@
     package="com.example.prerna.sspapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -48,7 +48,10 @@
             android:name=".NeftActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".FqaActivity" />
-        <activity android:name=".OnlineActivity"
+        <activity
+            android:name=".OnlineActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".ContactInfoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 

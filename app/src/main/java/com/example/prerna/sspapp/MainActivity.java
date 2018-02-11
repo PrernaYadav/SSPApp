@@ -1,10 +1,15 @@
 package com.example.prerna.sspapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +19,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -104,8 +112,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
                 final String selected = (String) listAdapter.getChild(i, i1);
-                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG)
-                        .show();
+                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG).show();
 
                 if (selected.equals("Ideology")){
                     startActivity(new Intent(MainActivity.this,IdeologyActivity.class));
@@ -133,7 +140,56 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this,FqaActivity.class));
                 }else if (selected.equals("Apply Online")){
                     startActivity(new Intent(MainActivity.this,OnlineActivity.class));
+                }else if (selected.equals("Apply ofline")){
+                    Bitmap bm = BitmapFactory.decodeResource( getResources(), R.drawable.offlineform);
+                    String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
+                    File file = new File(extStorageDirectory, "offlineform.PNG");
+
+                    try {
+                        FileOutputStream outStream = new FileOutputStream(file);
+                        bm.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+                        outStream.flush();
+                        outStream.close();
+
+                        Toast toast= Toast.makeText(getApplicationContext(),
+                                "Image Downloaded.Check Gallery", Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER| Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.show();
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }else if (selected.equals("Information")){
+                    startActivity(new Intent(MainActivity.this,ContactInfoActivity.class));
+
+                }else if (selected.equals("Facebook")){
+                    Uri uri = Uri.parse("https://www.facebook.com/SSPartyIndia/?hc_ref=SEARCH&fref=nf"); // missing 'http://' will cause crashed
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }else if (selected.equals("Twitter")){
+                    Uri uri = Uri.parse("https://twitter.com/SSPartyIndia"); // missing 'http://' will cause crashed
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }else if (selected.equals("Google+")){
+
+
+                    final Intent emailIntent = new Intent(
+                            android.content.Intent.ACTION_SEND);
+                    emailIntent.setType("plain/text");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
+                            new String[] { "info@ssparty.in" });
+                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Information");
+
+                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+                    
+                }else if (selected.equals("Youtube")){
+                    Uri uri = Uri.parse(" https://www.youtube.com/watch?v=X9rTM9_seiw"); // missing 'http://' will cause crashed
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
                 }
+
+
                 return true;
             }
         });
@@ -182,12 +238,21 @@ public class MainActivity extends AppCompatActivity {
         membership.add("Apply ofline");
 
 
+        List<String> contact = new ArrayList<>();
+        contact.add("Information");
+        contact.add("Facebook");
+        contact.add("Twitter");
+        contact.add("Google+");
+        contact.add("Youtube");
+
+
         listHash.put(listDataHeader.get(0), about);
         listHash.put(listDataHeader.get(1), leader);
         listHash.put(listDataHeader.get(2), media);
         listHash.put(listDataHeader.get(3), agenda);
         listHash.put(listDataHeader.get(4), donate);
         listHash.put(listDataHeader.get(5), membership);
+        listHash.put(listDataHeader.get(6), contact);
 
 
     }
