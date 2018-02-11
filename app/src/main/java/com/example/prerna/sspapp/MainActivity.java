@@ -114,34 +114,41 @@ public class MainActivity extends AppCompatActivity {
                 final String selected = (String) listAdapter.getChild(i, i1);
                 Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG).show();
 
-                if (selected.equals("Ideology")){
-                    startActivity(new Intent(MainActivity.this,IdeologyActivity.class));
-                }else if (selected.equals("How are we different")){
-                    startActivity(new Intent(MainActivity.this,DifferentActivity.class));
-                }else if (selected.equals("Shri Sripal Yadav")){
-                    startActivity(new Intent(MainActivity.this,SripalActivity.class));
-                }else if (selected.equals("Shri Rajpal Yadav")){
-                    startActivity(new Intent(MainActivity.this,RajpalActivity.class));
-                }else if (selected.equals("Shri Kuldeep Yadav")){
-                    startActivity(new Intent(MainActivity.this,KuldeepActivity.class));
-                }else if(selected.equals("Shri Rajesh Yadav")){
-                    startActivity(new Intent(MainActivity.this,RajeshActivity.class));
+                if (selected.equals("Ideology")) {
+                    startActivity(new Intent(MainActivity.this, IdeologyActivity.class));
+                } else if (selected.equals("How are we different")) {
+                    startActivity(new Intent(MainActivity.this, DifferentActivity.class));
+                } else if (selected.equals("Shri Sripal Yadav")) {
+                    startActivity(new Intent(MainActivity.this, SripalActivity.class));
+                } else if (selected.equals("Shri Rajpal Yadav")) {
+                    startActivity(new Intent(MainActivity.this, RajpalActivity.class));
+                } else if (selected.equals("Shri Kuldeep Yadav")) {
+                    startActivity(new Intent(MainActivity.this, KuldeepActivity.class));
+                } else if (selected.equals("Shri Rajesh Yadav")) {
+                    startActivity(new Intent(MainActivity.this, RajeshActivity.class));
 
-                }else if (selected.equals("SSP video")){
-                    startActivity(new Intent(MainActivity.this,VideosActivity.class));
+                } else if (selected.equals("SSP Photo")) {
+                    startActivity(new Intent(MainActivity.this, PhotoActivity.class));
 
-                }else if (selected.equals("Donate Here")){
-                    startActivity(new Intent(MainActivity.this,DonationActivity.class));
+                } else if (selected.equals("UP Agenda")) {
+                    startActivity(new Intent(MainActivity.this, UPAgendaActivity.class));
 
-                }else if (selected.equals("NEFT/RTGS")){
-                    startActivity(new Intent(MainActivity.this,NeftActivity.class));
+                } else if (selected.equals("SSP video")) {
+                    Uri uri = Uri.parse("https://www.youtube.com/channel/UCqI4tttImpfn6EfOglIlz4A"); // missing 'http://' will cause crashed
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                } else if (selected.equals("Donate Here")) {
+                    startActivity(new Intent(MainActivity.this, DonationActivity.class));
 
-                }else if (selected.equals("Donation FQAs")){
-                    startActivity(new Intent(MainActivity.this,FqaActivity.class));
-                }else if (selected.equals("Apply Online")){
-                    startActivity(new Intent(MainActivity.this,OnlineActivity.class));
-                }else if (selected.equals("Apply ofline")){
-                    Bitmap bm = BitmapFactory.decodeResource( getResources(), R.drawable.offlineform);
+                } else if (selected.equals("NEFT/RTGS")) {
+                    startActivity(new Intent(MainActivity.this, NeftActivity.class));
+
+                } else if (selected.equals("Donation FQAs")) {
+                    startActivity(new Intent(MainActivity.this, FqaActivity.class));
+                } else if (selected.equals("Apply Online")) {
+                    startActivity(new Intent(MainActivity.this, OnlineActivity.class));
+                } else if (selected.equals("Apply ofline")) {
+                    Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.offlineform);
                     String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
                     File file = new File(extStorageDirectory, "offlineform.PNG");
 
@@ -151,39 +158,39 @@ public class MainActivity extends AppCompatActivity {
                         outStream.flush();
                         outStream.close();
 
-                        Toast toast= Toast.makeText(getApplicationContext(),
+                        Toast toast = Toast.makeText(getApplicationContext(),
                                 "Image Downloaded.Check Gallery", Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER| Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.setGravity(Gravity.CENTER | Gravity.CENTER_HORIZONTAL, 0, 0);
                         toast.show();
 
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
-                }else if (selected.equals("Information")){
-                    startActivity(new Intent(MainActivity.this,ContactInfoActivity.class));
+                } else if (selected.equals("Information")) {
+                    startActivity(new Intent(MainActivity.this, ContactInfoActivity.class));
 
-                }else if (selected.equals("Facebook")){
+                } else if (selected.equals("Facebook")) {
                     Uri uri = Uri.parse("https://www.facebook.com/SSPartyIndia/?hc_ref=SEARCH&fref=nf"); // missing 'http://' will cause crashed
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
-                }else if (selected.equals("Twitter")){
+                } else if (selected.equals("Twitter")) {
                     Uri uri = Uri.parse("https://twitter.com/SSPartyIndia"); // missing 'http://' will cause crashed
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
-                }else if (selected.equals("Google+")){
+                } else if (selected.equals("Google+")) {
 
 
                     final Intent emailIntent = new Intent(
                             android.content.Intent.ACTION_SEND);
                     emailIntent.setType("plain/text");
                     emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
-                            new String[] { "info@ssparty.in" });
+                            new String[]{"info@ssparty.in"});
                     emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Information");
 
                     startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 
-                    
-                }else if (selected.equals("Youtube")){
+
+                } else if (selected.equals("Youtube")) {
                     Uri uri = Uri.parse(" https://www.youtube.com/watch?v=X9rTM9_seiw"); // missing 'http://' will cause crashed
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);

@@ -38,9 +38,9 @@
         <activity
             android:name=".RajeshActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
+      <!--  <activity
             android:name=".VideosActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />-->
         <activity
             android:name=".DonationActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -51,7 +51,13 @@
         <activity
             android:name=".OnlineActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ContactInfoActivity"
+        <activity
+            android:name=".ContactInfoActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".UPAgendaActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".PhotoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 

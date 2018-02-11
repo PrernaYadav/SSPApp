@@ -18,19 +18,152 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/orange">
+        android:layout_gravity="top">
 
-        <ImageView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/kuldeep"/>
+            android:background="@color/orange"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_1" />
 
 
-    </LinearLayout>
+         <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_2" />
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_3" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_4" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_5" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_6" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_7" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_8" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_9" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/photo_10" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/p" />
+
+            <!--     <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_11" />
+
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_12" />
+
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_13" />
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_14" />
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_15" />
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_16" />
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_17" />
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_18" />
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_19" />
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_20" />
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_21" />
+
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_22" />
+
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:src="@drawable/photo_23" />
+  -->
+
+        </LinearLayout>
+    </ScrollView>
 
 
 
