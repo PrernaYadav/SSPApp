@@ -1,13 +1,16 @@
 package com.example.prerna.sspapp;
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -79,6 +82,10 @@ public class OnlineActivity extends AppCompatActivity {
         submit = (Button) findViewById(R.id.btn_online_submit);
         reset = (Button) findViewById(R.id.btn_online_reset);
 
+
+        ActivityCompat.requestPermissions(OnlineActivity.this,
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                1);
 
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, genderrr);
@@ -241,6 +248,8 @@ public class OnlineActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     @Override
@@ -265,6 +274,32 @@ public class OnlineActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    Toast.makeText(OnlineActivity.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 
     private void updateLabel() {

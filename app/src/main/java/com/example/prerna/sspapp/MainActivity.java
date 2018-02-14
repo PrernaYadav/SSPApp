@@ -98,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
         initData();
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
         listView.setAdapter(listAdapter);
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -126,23 +124,18 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, KuldeepActivity.class));
                 } else if (selected.equals("Shri Rajesh Yadav")) {
                     startActivity(new Intent(MainActivity.this, RajeshActivity.class));
-
                 } else if (selected.equals("SSP Photo")) {
                     startActivity(new Intent(MainActivity.this, PhotoActivity.class));
-
                 } else if (selected.equals("UP Agenda")) {
                     startActivity(new Intent(MainActivity.this, UPAgendaActivity.class));
-
                 } else if (selected.equals("SSP video")) {
                     Uri uri = Uri.parse("https://www.youtube.com/channel/UCqI4tttImpfn6EfOglIlz4A"); // missing 'http://' will cause crashed
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 } else if (selected.equals("Donate Here")) {
                     startActivity(new Intent(MainActivity.this, DonationActivity.class));
-
                 } else if (selected.equals("NEFT/RTGS")) {
                     startActivity(new Intent(MainActivity.this, NeftActivity.class));
-
                 } else if (selected.equals("Donation FQAs")) {
                     startActivity(new Intent(MainActivity.this, FqaActivity.class));
                 } else if (selected.equals("Apply Online")) {
@@ -168,7 +161,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } else if (selected.equals("Information")) {
                     startActivity(new Intent(MainActivity.this, ContactInfoActivity.class));
-
                 } else if (selected.equals("Facebook")) {
                     Uri uri = Uri.parse("https://www.facebook.com/SSPartyIndia/?hc_ref=SEARCH&fref=nf"); // missing 'http://' will cause crashed
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -178,25 +170,19 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 } else if (selected.equals("Google+")) {
-
-
                     final Intent emailIntent = new Intent(
                             android.content.Intent.ACTION_SEND);
                     emailIntent.setType("plain/text");
                     emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
                             new String[]{"info@ssparty.in"});
                     emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Information");
-
                     startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 
-
                 } else if (selected.equals("Youtube")) {
-                    Uri uri = Uri.parse(" https://www.youtube.com/watch?v=X9rTM9_seiw"); // missing 'http://' will cause crashed
+                    Uri uri = Uri.parse("https://www.youtube.com/watch?v=X9rTM9_seiw"); // missing 'http://' will cause crashed
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }
-
-
                 return true;
             }
         });
@@ -268,5 +254,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Toast.makeText(MainActivity.this, "ddddddddccccdddd0", Toast.LENGTH_LONG).show();
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(a);
     }
 }

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.prerna.sspapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -13,7 +14,7 @@
         android:roundIcon="@drawable/partysambol_01"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,9 +39,6 @@
         <activity
             android:name=".RajeshActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-      <!--  <activity
-            android:name=".VideosActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />-->
         <activity
             android:name=".DonationActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -54,10 +52,11 @@
         <activity
             android:name=".ContactInfoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".UPAgendaActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
-            android:name=".PhotoActivity"
+            android:name=".UPAgendaActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".PhotoActivity" />
+        <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
