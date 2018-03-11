@@ -1,4 +1,4 @@
-package com.example.prerna.sspapp;
+package com.example.sumansoft.ssp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -20,7 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHash;
     private int flag = 1;
-    private LinearLayout linearLayout;
+     LinearLayout linearLayout;
     private ImageView imageView;
     private TextView textView;
 
@@ -41,15 +40,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar =  findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
         toolbar.setTitle("SARVA SAMBHAV PARTY");
         toolbar.setTitleTextColor(Color.WHITE);
 
-        listView = (ExpandableListView) findViewById(R.id.lv_expand);
-        linearLayout = (LinearLayout) findViewById(R.id.home);
-        imageView = (ImageView) findViewById(R.id.arrow);
-        textView = (TextView) findViewById(R.id.lblListHeader);
+        listView = findViewById(R.id.lv_expand);
+        linearLayout = findViewById(R.id.home);
+        imageView =  findViewById(R.id.arrow);
+        textView =  findViewById(R.id.lblListHeader);
         listView.setDividerHeight(5);
 
 
@@ -110,78 +109,106 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
                 final String selected = (String) listAdapter.getChild(i, i1);
-                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG).show();
+//                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG).show();
 
-                if (selected.equals("Ideology")) {
-                    startActivity(new Intent(MainActivity.this, IdeologyActivity.class));
-                } else if (selected.equals("How are we different")) {
-                    startActivity(new Intent(MainActivity.this, DifferentActivity.class));
-                } else if (selected.equals("Shri Sripal Yadav")) {
-                    startActivity(new Intent(MainActivity.this, SripalActivity.class));
-                } else if (selected.equals("Shri Rajpal Yadav")) {
-                    startActivity(new Intent(MainActivity.this, RajpalActivity.class));
-                } else if (selected.equals("Shri Kuldeep Yadav")) {
-                    startActivity(new Intent(MainActivity.this, KuldeepActivity.class));
-                } else if (selected.equals("Shri Rajesh Yadav")) {
-                    startActivity(new Intent(MainActivity.this, RajeshActivity.class));
-                } else if (selected.equals("SSP Photo")) {
-                    startActivity(new Intent(MainActivity.this, PhotoActivity.class));
-                } else if (selected.equals("UP Agenda")) {
-                    startActivity(new Intent(MainActivity.this, UPAgendaActivity.class));
-                } else if (selected.equals("SSP video")) {
-                    Uri uri = Uri.parse("https://www.youtube.com/channel/UCqI4tttImpfn6EfOglIlz4A"); // missing 'http://' will cause crashed
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                } else if (selected.equals("Donate Here")) {
-                    startActivity(new Intent(MainActivity.this, DonationActivity.class));
-                } else if (selected.equals("NEFT/RTGS")) {
-                    startActivity(new Intent(MainActivity.this, NeftActivity.class));
-                } else if (selected.equals("Donation FQAs")) {
-                    startActivity(new Intent(MainActivity.this, FqaActivity.class));
-                } else if (selected.equals("Apply Online")) {
-                    startActivity(new Intent(MainActivity.this, OnlineActivity.class));
-                } else if (selected.equals("Apply ofline")) {
-                    Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.offlineform);
-                    String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
-                    File file = new File(extStorageDirectory, "offlineform.PNG");
+                switch (selected) {
+                    case "Ideology":
+                        startActivity(new Intent(MainActivity.this, IdeologyActivity.class));
+                        break;
+                    case "How are we different":
+                        startActivity(new Intent(MainActivity.this, DifferentActivity.class));
+                        break;
+                    case "Shri Sripal Yadav":
+                        startActivity(new Intent(MainActivity.this, SripalActivity.class));
+                        break;
+                    case "Shri Rajpal Yadav":
+                        startActivity(new Intent(MainActivity.this, RajpalActivity.class));
+                        break;
+                    case "Shri Kuldeep Yadav":
+                        startActivity(new Intent(MainActivity.this, KuldeepActivity.class));
+                        break;
+                    case "Shri Rajesh Yadav":
+                        startActivity(new Intent(MainActivity.this, RajeshActivity.class));
+                        break;
+                    case "SSP Photo":
+                        startActivity(new Intent(MainActivity.this, PhotoActivity.class));
+                        break;
+                    case "UP Agenda":
+                        startActivity(new Intent(MainActivity.this, UPAgendaActivity.class));
+                        break;
+                    case "SSP video": {
+                        Uri uri = Uri.parse("https://www.youtube.com/channel/UCqI4tttImpfn6EfOglIlz4A"); // missing 'http://' will cause crashed
 
-                    try {
-                        FileOutputStream outStream = new FileOutputStream(file);
-                        bm.compress(Bitmap.CompressFormat.PNG, 100, outStream);
-                        outStream.flush();
-                        outStream.close();
-
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                "Image Downloaded.Check Gallery", Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER | Gravity.CENTER_HORIZONTAL, 0, 0);
-                        toast.show();
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                        break;
                     }
-                } else if (selected.equals("Information")) {
-                    startActivity(new Intent(MainActivity.this, ContactInfoActivity.class));
-                } else if (selected.equals("Facebook")) {
-                    Uri uri = Uri.parse("https://www.facebook.com/SSPartyIndia/?hc_ref=SEARCH&fref=nf"); // missing 'http://' will cause crashed
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                } else if (selected.equals("Twitter")) {
-                    Uri uri = Uri.parse("https://twitter.com/SSPartyIndia"); // missing 'http://' will cause crashed
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                } else if (selected.equals("Google+")) {
-                    final Intent emailIntent = new Intent(
-                            android.content.Intent.ACTION_SEND);
-                    emailIntent.setType("plain/text");
-                    emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
-                            new String[]{"info@ssparty.in"});
-                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Information");
-                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                    case "Donate Here":
+                        startActivity(new Intent(MainActivity.this, DonationActivity.class));
+                        break;
+                    case "NEFT/RTGS":
+                        startActivity(new Intent(MainActivity.this, NeftActivity.class));
+                        break;
+                    case "Donation FQAs":
+                        startActivity(new Intent(MainActivity.this, FqaActivity.class));
+                        break;
+                    case "Apply Online":
+                        startActivity(new Intent(MainActivity.this, OnlineActivity.class));
+                        break;
+                    case "Apply ofline":
+                        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.offlineform);
+                        String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
+                        File file = new File(extStorageDirectory, "offlineform.PNG");
 
-                } else if (selected.equals("Youtube")) {
-                    Uri uri = Uri.parse("https://www.youtube.com/watch?v=X9rTM9_seiw"); // missing 'http://' will cause crashed
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
+                        try {
+                            FileOutputStream outStream = new FileOutputStream(file);
+                            bm.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+                            outStream.flush();
+                            outStream.close();
+
+                            Toast toast = Toast.makeText(getApplicationContext(),
+                                    "Image Downloaded.Check Gallery", Toast.LENGTH_SHORT);
+                            toast.setGravity(Gravity.CENTER | Gravity.CENTER_HORIZONTAL, 0, 0);
+                            toast.show();
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case "Information":
+                        startActivity(new Intent(MainActivity.this, ContactInfoActivity.class));
+                        break;
+                    case "Facebook": {
+                        Uri uri = Uri.parse("https://www.facebook.com/SSPartyIndia/?hc_ref=SEARCH&fref=nf"); // missing 'http://' will cause crashed
+
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                        break;
+                    }
+                    case "Twitter": {
+                        Uri uri = Uri.parse("https://twitter.com/SSPartyIndia"); // missing 'http://' will cause crashed
+
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                        break;
+                    }
+                    case "Google+":
+                        final Intent emailIntent = new Intent(
+                                Intent.ACTION_SEND);
+                        emailIntent.setType("plain/text");
+                        emailIntent.putExtra(Intent.EXTRA_EMAIL,
+                                new String[]{"info@ssparty.in"});
+                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Information");
+                        startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+                        break;
+                    case "Youtube": {
+                        Uri uri = Uri.parse("https://www.youtube.com/watch?v=X9rTM9_seiw"); // missing 'http://' will cause crashed
+
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                        break;
+                    }
                 }
                 return true;
             }

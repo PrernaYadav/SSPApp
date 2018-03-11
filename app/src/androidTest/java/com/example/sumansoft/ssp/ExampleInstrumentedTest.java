@@ -1,4 +1,4 @@
-package com.example.prerna.sspapp;
+package com.example.sumansoft.ssp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.prerna.sspapp", appContext.getPackageName());
+        assertEquals("com.example.sumansoft.ssp", appContext.getPackageName());
     }
 }

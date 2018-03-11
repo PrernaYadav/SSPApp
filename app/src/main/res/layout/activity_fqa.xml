@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    tools:context="com.example.prerna.sspapp.FqaActivity"
+    tools:context="com.example.sumansoft.ssp.FqaActivity"
     android:orientation="vertical">
 
 

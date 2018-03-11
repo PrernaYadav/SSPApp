@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.prerna.sspapp">
+    package="com.example.sumansoft.ssp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
         android:roundIcon="@drawable/partysambol_01"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.example.sumansoft.ssp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,41 +22,41 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IdeologyActivity"
+            android:name="com.example.sumansoft.ssp.IdeologyActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".DifferentActivity"
+            android:name="com.example.sumansoft.ssp.DifferentActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".SripalActivity"
+            android:name="com.example.sumansoft.ssp.SripalActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".RajpalActivity"
+            android:name="com.example.sumansoft.ssp.RajpalActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".KuldeepActivity"
+            android:name="com.example.sumansoft.ssp.KuldeepActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".RajeshActivity"
+            android:name="com.example.sumansoft.ssp.RajeshActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".DonationActivity"
+            android:name="com.example.sumansoft.ssp.DonationActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".NeftActivity"
+            android:name="com.example.sumansoft.ssp.NeftActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".FqaActivity" />
+        <activity android:name="com.example.sumansoft.ssp.FqaActivity" />
         <activity
-            android:name=".OnlineActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".ContactInfoActivity"
+            android:name="com.example.sumansoft.ssp.OnlineActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".UPAgendaActivity"
+            android:name="com.example.sumansoft.ssp.ContactInfoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".PhotoActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name="com.example.sumansoft.ssp.UPAgendaActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.example.sumansoft.ssp.PhotoActivity" />
+        <activity android:name="com.example.sumansoft.ssp.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 

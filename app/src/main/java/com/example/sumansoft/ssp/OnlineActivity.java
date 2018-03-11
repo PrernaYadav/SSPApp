@@ -1,4 +1,4 @@
-package com.example.prerna.sspapp;
+package com.example.sumansoft.ssp;
 
 import android.Manifest;
 import android.app.DatePickerDialog;
@@ -205,6 +205,21 @@ public class OnlineActivity extends AppCompatActivity {
                             "Data submitted successfully", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER| Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
+
+/*
+
+                    String mail = "name  :" +namee+"Date of birth   :"+dobb+"Mobile   :"+mobilee;
+                    Intent i = new Intent(Intent.ACTION_SEND); // start the activity for sending an email
+                    i.setType("sumansoft/email"); //set the mime type for the Email
+                    i.putExtra(android.content.Intent.EXTRA_SUBJECT, "Online apply " + namee);
+                    String[] to = {"prernasyadav027@gmail.com"};
+                    i.putExtra(android.content.Intent.EXTRA_EMAIL, to);
+
+                    i.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(mail));
+                    startActivity(Intent.createChooser(i, "EMAIL"));
+*/
+
+
                     name.setText("");
                     dob.setText("");
                     basic.setText("");
@@ -218,7 +233,11 @@ public class OnlineActivity extends AppCompatActivity {
                     telephone.setText("");
                     date.setText("");
 
+
+
                 }
+
+
             }
         });
 

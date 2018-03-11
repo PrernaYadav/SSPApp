@@ -1,4 +1,4 @@
-package com.example.prerna.sspapp;
+package com.example.sumansoft.ssp;
 
 import android.content.Intent;
 import android.graphics.Color;

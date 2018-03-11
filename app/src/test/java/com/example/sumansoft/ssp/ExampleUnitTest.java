@@ -1,4 +1,4 @@
-package com.example.prerna.sspapp;
+package com.example.sumansoft.ssp;
 
 import org.junit.Test;
 

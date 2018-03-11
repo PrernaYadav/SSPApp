@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/orange"
     android:orientation="vertical"
-    tools:context="com.example.prerna.sspapp.ContactInfoActivity">
+    tools:context="com.example.sumansoft.ssp.ContactInfoActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_contact_info"

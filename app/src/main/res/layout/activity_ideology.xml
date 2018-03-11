@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.prerna.sspapp.IdeologyActivity"
+    tools:context="com.example.sumansoft.ssp.IdeologyActivity"
     android:background="@android:color/white"
     android:orientation="vertical">
 
